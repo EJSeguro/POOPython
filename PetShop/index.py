@@ -9,7 +9,7 @@ animais = []
 cadastrosTotais = 0
 
 while True:
-    os.system("cls")
+    os.system("cls || clear")
     print("Escolha uma opção:")
     print("1. Cadastrar animal")
     print("2. Listar animals")
@@ -20,7 +20,7 @@ while True:
     try:
         if opcao == 1:
             while True:
-                os.system("cls")
+                os.system("cls || clear")
                 opcaoAnimal = int(input("Qual animal você deseja criar?\n1. Cachorro\n2. Gato\n3. Ave\n4. Sair\nOpção: "))
                 try:
                     opcaoAnimal = int(opcaoAnimal)
@@ -34,7 +34,7 @@ while True:
                     print("Opção inválida")
                 if opcaoAnimal == 1 or opcaoAnimal == 2 or opcaoAnimal == 3:
                         while True:
-                            os.system("cls")
+                            os.system("cls || clear")
                             try:
                                 nome = input("Nome: ")
                             except ValueError:
@@ -71,7 +71,7 @@ while True:
                                 print("Cor inválido")
                                 input("Voltando ao MENU... Pressione Enter")
                                 break
-                            os.system("cls")
+                            os.system("cls || clear")
                             cadastrosTotais += 1
                             id = 1 if animais == [] else cadastrosTotais
                             ultimaModificacao = datetime.datetime.now().strftime("%d/%m/%Y %H:%M")
@@ -98,7 +98,7 @@ while True:
                     print("Opção inválida")
                     
         elif opcao == 2:
-            os.system("cls")
+            os.system("cls || clear")
             tipo = input("Qual tipo de animais você deseja listar? 1-Cachorros 2-Gatos 3-Aves 4-Todos: ")
             try:
                 tipo = int(tipo)
@@ -115,7 +115,7 @@ while True:
                 input("Voltando ao MENU... Pressione Enter")
             Animal.exibirAnimais(animais,tipo)
         elif opcao == 3:
-                os.system("cls")
+                os.system("cls || clear")
                 try:
                     id = int(input("Qual animal você deseja remover? Digite o ID do animal: "))
                     animalEncontrado = None
@@ -131,7 +131,7 @@ while True:
                     print("Digite um ID válido")
                 input("Voltando ao MENU... Pressione Enter")
         if opcao == 4:
-            os.system("cls")
+            os.system("cls || clear")
             try:
                 animalEncontrado = None
                 id = int(input("Qual animal você deseja editar? Digite o ID do animal: "))
